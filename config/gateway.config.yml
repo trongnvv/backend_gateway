@@ -1,0 +1,27 @@
+http:
+  port: 8086
+admin:
+  port: 9876
+  host: localhost
+apiEndpoints:
+  private-api:
+    host: '*'
+    paths: '/api/v1/*'
+policies:
+  - basic-auth
+  - cors
+  - expression
+  - key-auth
+  - log
+  - oauth2
+  - proxy
+  - rate-limit
+  - gateway_tracer
+  - backend
+pipelines:
+  apiV1:
+    apiEndpoints:
+      - private-api
+    policies:
+      - gateway_tracer:
+      - backend:

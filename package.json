@@ -1,0 +1,15 @@
+{
+  "name": "backend-gateway",
+  "description": "BACKEND API Gateway",
+  "repository": {},
+  "license": "UNLICENSED",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express-gateway": "^1.16.10",
+    "jaeger-client": "^3.17.2",
+    "opentracing": "^0.14.4",
+    "prom-client": "^12.0.0"
+  }
+}
